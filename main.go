@@ -31,7 +31,7 @@ func init() {
 
 func main() {
 	http.HandleFunc("/callback", uploadDropbox)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), nil))
 }
 
 func uploadDropbox(w http.ResponseWriter, r *http.Request) {
