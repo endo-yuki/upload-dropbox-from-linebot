@@ -1,1 +1,1 @@
-web: bin/upload-dropbox-to-linebot
+web: bin/upload-dropbox-from-linebot
