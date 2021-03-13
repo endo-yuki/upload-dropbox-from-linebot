@@ -36,8 +36,8 @@ func main() {
 
 func uploadDropbox(w http.ResponseWriter, r *http.Request) {
 	bot, err := linebot.New(
-		conf.channelSecrt,
-		conf.channelToken,
+		os.Getenv("CHANNEL_SECRET"),
+		os.Getenv("CHANNEL_TOKEN"),
 	)
 	if err != nil {
 		log.Fatal(err)
